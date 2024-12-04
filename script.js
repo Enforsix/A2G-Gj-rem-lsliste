@@ -27,8 +27,10 @@ addBtn.addEventListener("click", function (){
 
     finishedBtn.addEventListener("click", function (){
         console.log("finishedBtn clicked");
-        todoItem.style.textDecoration = "line-through";
-
+        if (todoItem.style.textDecoration === "line-through") {
+            todoItem.style.textDecoration = "none";} 
+        
+        else {todoItem.style.textDecoration = "line-through";}
     });
 
     // Slett knapp
